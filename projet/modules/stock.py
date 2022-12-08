@@ -53,7 +53,7 @@ def supprimer_produit(nom):
         etat=True
     else:
         etat=False 
-    return print(etat)
+    return etat
 
 # modifier produit
 def modifier_produit(nom,nom_new='', puht_new=0, quantite_new=0):
@@ -65,10 +65,10 @@ def modifier_produit(nom,nom_new='', puht_new=0, quantite_new=0):
         if nom_new!=noms[indice] and nom_new!='' :
             noms[indice]=nom_new.upper()
             etat=True
-        elif puht_new != puhts[indice] and puht_new !=0  :
+        if puht_new != puhts[indice] and puht_new !=0  :
             puhts[indice]=puht_new
             etat=True
-        elif quantite_new!=quantites[indice] and quantite_new!=0 :
+        if quantite_new!=quantites[indice] and quantite_new!=0 :
             quantites[indice]=quantite_new
             etat=True
     else:
